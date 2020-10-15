@@ -8,7 +8,7 @@ import numpy as np
 
 # In[6]:
 
-threshold = 0.9    # 閥值
+threshold = 0.94    # 閥值
 deviceVersion = 'img/'  # 圖片上層路徑
 
 # In[7]:
@@ -251,6 +251,9 @@ def LevelUp():
     return Spec("LevelUp.PNG", touchButton)
 
 
+def AttackButton():
+    return Spec("AttackButton.PNG", touchButton)
+
 def NoLocking():
     def f(template, img):
         touchButton(template, img, 0, 75)
@@ -270,12 +273,13 @@ specs = [
     BackBattle,             # 返回戰鬥
     NoLocking,              # 取得船艦點擊
     CheckHold,              # 確認港口佔領
-    #戰鬥
-    GoBattleButton,         # 出征按鈕
-    BattleList,             # 右側三個點出現列表
-    MainMission,            # 列表選取主線戰鬥
-    MainMission1,           # 列表選取港口戰鬥
-    MainMission2,           # 列表選取港口戰鬥
+    AttackButton,           # 戰力較高依然出擊
+    # 戰鬥
+    #GoBattleButton,         # 出征按鈕
+    #BattleList,             # 右側三個點出現列表
+    #MainMission,            # 列表選取主線戰鬥
+    #MainMission1,           # 列表選取港口戰鬥
+    #MainMission2,           # 列表選取港口戰鬥
     ConfirmFightButton,     # 確認出擊按鈕
     ConfirmButton,          # 確定按鈕
 ]
